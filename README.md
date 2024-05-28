@@ -1,4 +1,4 @@
-# <p name="h1">PMAT</p> 
+# <p name="h1">jasmine genome</p> 
 Some scripts for plot in jasmine genome
 
 ## <a name="C1">Installation </a>
