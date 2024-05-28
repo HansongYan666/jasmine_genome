@@ -8,9 +8,9 @@ git clone https://github.com/HansongYan666/jasmine_genome.git
 
 
 ## <a name="C2">Requirement</a>
--[**Biopython**](https://github.com/biopython/biopython) Needs to be installed with pip.
--[**pyfaidx**](https://github.com/mdshw5/pyfaidx.git) Needs to be installed with pip.
--[**pyMSAviz**](https://github.com/moshi4/pyMSAviz/) Needs to be installed with pip.
+- [**Biopython**](https://github.com/biopython/biopython) Needs to be installed with pip.
+- [**pyfaidx**](https://github.com/mdshw5/pyfaidx.git) Needs to be installed with pip.
+- [**pyMSAviz**](https://github.com/moshi4/pyMSAviz/) Needs to be installed with pip.
 
 
 ## <a name="C3">Options and usage</a>
