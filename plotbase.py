@@ -6,26 +6,6 @@ from subprocess import call
 import argparse
 
 
-
-def muscle_align(infasta, outfasta):
-    fasta = pyfaidx.Fasta(infasta)
-    out = open("tmp1.fasta", "w")
-    for name in fasta.keys():
-        seq = str(fasta[name])
-        spe = seq[0:3].upper()
-        spe = Seq(spe)
-        spe = spe.reverse_complement()
-        if spe in ["TAG", "TAA", "TGA"]:
-            seq = Seq(seq).reverse_complement()
-            seq = str(seq).strip()
-            print(spe)
-        out.write(f">{name}\n")
-        out.write(f"{seq}\n")
-    out.close()
-    cmd = f"muscle -align tmp1.fasta -output {outfasta}\n"
-    cmd += "#rm tmp1.fasta"
-    call(cmd, shell=True)
-
 def translate(seq):
     length = len(seq)
     s = length % 3
@@ -38,7 +18,7 @@ def translate(seq):
         else:
             aas = aaseq.translate()
         proseq += aas
-    # print(proseq)
+    #print(proseq)
     # if s == 0:
     #     return proseq
     # else:
@@ -64,26 +44,24 @@ def parser_fasta(alignfile, outfile):
 
 
 def plot_msa(infile, outpng):
-    mv = MsaViz(infile, color_scheme="Taylor", wrap_length=85, show_grid=True, show_consensus=True)
+    mv = MsaViz(infile, color_scheme="Taylor", wrap_length=87, show_grid=True, show_consensus=False, wrap_space_size=1)
     mv.savefig(outpng)
 
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="plot msa align and aa sequences, muscle should be in PATH")
+    parser = argparse.ArgumentParser(description="plot base and aa sequences")
     parser.add_argument("-i", "--input", type=str,help="the input fasta file", dest="infile")
     parser.add_argument("-o", "--output", type=str,help="the output png file", dest = "outfile")
     args = parser.parse_args()
     infile = args.infile
     outpng = args.outfile
     tmp = "tmp.fasta"
-    alignfast = "align.fasta"
     try:
-        muscle_align(infile, alignfast)
-        parser_fasta(alignfast, tmp)
+        parser_fasta(infile, tmp)
         plot_msa(tmp, outpng)
     except:
-        print("Print usage: python plotmsa.py -h")
+        print("Print usage: python plotbase -h")
 
 
 
