@@ -1,20 +1,22 @@
-# <p name="h1">jasmine genome</p> 
+# `<p name="h1">`jasmine genome`</p>`
+
 Some scripts for plot in jasmine genome
 
-## <a name="C1">Installation </a>
+## `<a name="C1">`Installation `</a>`
+
 ```sh
 git clone https://github.com/HansongYan666/jasmine_genome.git
 ```
 
+## `<a name="C2">`Requirement`</a>`
 
-## <a name="C2">Requirement</a>
 - [**Biopython**](https://github.com/biopython/biopython) Needs to be installed with pip.
 - [**pyfaidx**](https://github.com/mdshw5/pyfaidx.git) Needs to be installed with pip.
 - [**pyMSAviz**](https://github.com/moshi4/pyMSAviz/) Needs to be installed with pip.
 - [**muscle**](https://github.com/rcedgar/muscle.git) Needs to be installed in PATH(for script plotmsa.py).
+- **[vmatch](https://github.com/uwb-linux/vmatch)** Needs to be installed in PATH(for script RepFind_stat.py).
 
-
-## <a name="C3">Options and usage</a>
+## `<a name="C3">`Options and usage`</a>`
 
 ### plot base and AA
 
@@ -32,7 +34,6 @@ options:
                         the output png file
 ```
 
-
 ### plot mas alignment base and AA
 
 ```shell
@@ -49,4 +50,23 @@ options:
                         the output png file
 ```
 
+### find long repeat
+This script is used for long repeat identification and result information statistics. Please ensure that mkvtree and vmatch are installed and have been run to obtain preliminary results before using the script.
 
+
+```shell
+python PATH_to_jasmine_genome/find_long_repeat/RepFind_stat.py --help
+usage: RepFind_stat.py [-h] [-l L] [-seedlength SEEDLENGTH] fasta_list prefix
+
+Script for get chloroplast statistics
+
+positional arguments:
+  fasta_list            input fasta file list,separate with ,
+  prefix                output prefix
+
+options:
+  -h, --help            show this help message and exit
+  -l L                  search minimal length. [default: 30]
+  -seedlength SEEDLENGTH
+                        Specify the seed length. [default: 7]
+```

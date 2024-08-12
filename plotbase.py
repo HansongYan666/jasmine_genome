@@ -44,8 +44,8 @@ def parser_fasta(alignfile, outfile):
 
 
 def plot_msa(infile, outpng):
-    mv = MsaViz(infile, color_scheme="Taylor", wrap_length=87, show_grid=True, show_consensus=False, wrap_space_size=1)
-    mv.savefig(outpng)
+    mv = MsaViz(infile, color_scheme="Nucleotide", wrap_length=81, show_grid=False, show_consensus=False, wrap_space_size=1)
+    mv.savefig(outpng, dpi=300)
 
 
 
@@ -57,11 +57,13 @@ if __name__ == "__main__":
     infile = args.infile
     outpng = args.outfile
     tmp = "tmp.fasta"
-    try:
-        parser_fasta(infile, tmp)
-        plot_msa(tmp, outpng)
-    except:
-        print("Print usage: python plotbase -h")
+    parser_fasta(infile, tmp)
+    plot_msa(tmp, outpng)
+    # try:
+    #     parser_fasta(infile, tmp)
+    #     plot_msa(tmp, outpng)
+    # except:
+    #     print("Print usage: python plotbase -h")
 
 
 
