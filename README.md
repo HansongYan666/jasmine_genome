@@ -1,14 +1,14 @@
-# `<p name="h1">`jasmine genome`</p>`
+# <p name="h1">jasmine genome</p>
 
 Some scripts for plot in jasmine genome
 
-## `<a name="C1">`Installation `</a>`
+## <a name="C1">Installation </a>
 
 ```sh
 git clone https://github.com/HansongYan666/jasmine_genome.git
 ```
 
-## `<a name="C2">`Requirement`</a>`
+## <a name="C2">Requirement</a>
 
 - [**Biopython**](https://github.com/biopython/biopython) Needs to be installed with pip.
 - [**pyfaidx**](https://github.com/mdshw5/pyfaidx.git) Needs to be installed with pip.
@@ -16,7 +16,7 @@ git clone https://github.com/HansongYan666/jasmine_genome.git
 - [**muscle**](https://github.com/rcedgar/muscle.git) Needs to be installed in PATH(for script plotmsa.py).
 - **[vmatch](https://github.com/uwb-linux/vmatch)** Needs to be installed in PATH(for script RepFind_stat.py).
 
-## `<a name="C3">`Options and usage`</a>`
+## <a name="C3">Options and usage</a>
 
 ### plot base and AA
 
