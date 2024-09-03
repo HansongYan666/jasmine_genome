@@ -22,7 +22,13 @@ def muscle_align(infasta, outfasta):
         out.write(f">{name}\n")
         out.write(f"{seq}\n")
     out.close()
-    cmd = f"muscle -align tmp1.fasta -output {outfasta}\n"
+    try:
+        cmd = f"muscle -align tmp1.fasta -output {outfasta}\n"
+        call(cmd, shell=True)
+    except:
+        cmd += f"muscle -in tmp1.fasta -out {outfasta}\n"
+        call(cmd, shell=True)
+
     cmd += "#rm tmp1.fasta"
     call(cmd, shell=True)
 
