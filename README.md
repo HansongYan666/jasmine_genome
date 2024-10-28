@@ -4,15 +4,20 @@ Some scripts for plot in jasmine genome
 
 ## <a name="C1">Installation </a>
 
+## <a name="C1">pyMSAviz must be installed </a>
 ```sh
-git clone https://github.com/HansongYan666/jasmine_genome.git
+git clone git@github.com:HansongYan666/pyMSAviz.git 
+```
+```sh
+pip uninstall pyMSAviz
+git clone https://github.com/HansongYan666/pyMSAviz.git
+cd pyMSAviz && pip install ./
 ```
 
 ## <a name="C2">Requirement</a>
 
 - [**Biopython**](https://github.com/biopython/biopython) Needs to be installed with pip.
 - [**pyfaidx**](https://github.com/mdshw5/pyfaidx.git) Needs to be installed with pip.
-- [**pyMSAviz**](https://github.com/moshi4/pyMSAviz/) Needs to be installed with pip.
 - [**muscle**](https://github.com/rcedgar/muscle.git) Needs to be installed in PATH(for script plotmsa.py).
 - **[vmatch](https://github.com/uwb-linux/vmatch)** Needs to be installed in PATH(for script RepFind_stat.py).
 

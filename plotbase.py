@@ -44,7 +44,7 @@ def parser_fasta(alignfile, outfile):
 
 
 def plot_msa(infile, outpng):
-    mv = MsaViz(infile, color_scheme="Nucleotide", wrap_length=81, show_grid=False, show_consensus=False, wrap_space_size=1)
+    mv = MsaViz(infile, color_scheme="jingping", wrap_length=81, show_grid=False, show_consensus=False, wrap_space_size=1)
     mv.savefig(outpng, dpi=300)
 
 
