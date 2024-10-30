@@ -4,10 +4,7 @@ Some scripts for plot in jasmine genome
 
 ## <a name="C1">Installation </a>
 
-## <a name="C1">pyMSAviz must be installed </a>
-```sh
-git clone git@github.com:HansongYan666/pyMSAviz.git 
-```
+### <a name="C1">pyMSAviz must be installed </a>
 ```sh
 pip uninstall pyMSAviz
 git clone https://github.com/HansongYan666/pyMSAviz.git
